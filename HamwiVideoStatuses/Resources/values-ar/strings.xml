@@ -1,0 +1,38 @@
+<resources>
+  <string name="app_name">حالات فيديو</string>
+  <string name="navigation_drawer_open">Open navigation drawer</string>
+  <string name="navigation_drawer_close">Close navigation drawer</string>
+  <string name="notification_name">إخطارات التطبيق</string>
+  <string name="notification_description">اشعارات اضافة فيديوهات جديدة</string>
+  <string name="startup_error">عذرا ، حدث خطأ غير متوقع أثناء تشغيل التطبيق. يمكنك محاولة فتح التطبيق لاحقًا!</string>
+  <string name="connection_error">الرجاء التحقق من اتصال الانترنت الخاص بك.</string>
+  <string name="access">يرجى منح الإذن للوصول إلى ذاكرة الهاتف للاستمتاع بتنزيل ومشاركة مقاطع الفيديو مع الأصدقاء مجانًا!</string>
+  <string name="watch_ad">تحتاج إلى مشاهدة إعلان قصير لمتابعة تنزيل الفيديو ، إذا كنت توافق ، يرجى الضغط على "متابعة"</string>
+  <string name="access_permission">إذن الوصول</string>
+  <string name="confirm">متابعة</string>
+  <string name="cancel">إلغاء</string>
+  <string name="search">بحث</string>
+  <string name="share">مشاركة</string>
+  <string name="description">التطبيق الأول في العالم لجميع أنواع حالات الفيديو في العديد من الفئات المختلفة.</string>
+  <string name="downloading_successfully">تم التنزيل بنجاح!</string>
+  <string name="downloading_error">حدث خطأ غير متوقع أثناء التنزيل!</string>
+  <string name="already_exists">الفيديو الذي تحاول تنزيله موجود بالفعل على جهازك!</string>
+  <string name="added_to_favorites">تمت إضافة الفيديو بنجاح إلى قائمة مقاطع الفيديو التي أعجبتني.</string>
+  <string name="remove_from_favorites">تمت إزالة الفيديو من قائمة مقاطع الفيديو التي نالت الإعجاب.</string>
+  <string name="videos">الفيديوهات</string>
+  <string name="recent_videos">أحدث الفيديوهات</string>
+  <string name="about_app">حول التطبيق</string>
+  <string name="rate">تقييم</string>
+  <string name="liked_videos">فيديوهات أعجبتك</string>
+  <string name="no_liked_videos">لم يتم الإعجاب بأي فيديو</string>
+  <string name="loading">جاري التحميل...</string>
+  <string name="whatsapp_package_name">com.whatsapp</string>
+  <string name="whatsapp_business_package_name">com.whatsapp.w4b</string>
+  <string name="whatsapp_not_found">تطبيق الواتس اب غير موجود على هاتفك</string>
+  <string name="press_back">اضغط مرة أخرى للخروج!</string>
+  <string name="app_ads_id">ca-app-pub-7526599290234026~3760915607</string>
+  <string name="banner_ad_unit_id">ca-app-pub-7526599290234026/4787412035</string>
+  <string name="interstitial_ad_unit_id">ca-app-pub-7526599290234026/8630098902</string>
+  <string name="download_our_app">لمزيد من الحالات ، قم بتنزيل تطبيقنا الآن! https://play.google.com/store/apps/details?id=</string>
+  <string name="app_link">https://play.google.com/store/apps/details?id=</string>
+</resources>

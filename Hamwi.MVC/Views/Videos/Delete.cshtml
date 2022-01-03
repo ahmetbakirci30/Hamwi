@@ -1,0 +1,64 @@
+﻿@model Video
+@inject IHamwiServices Hamwi
+
+@{
+    if (Model != null)
+    {
+        Model.Category = await Hamwi.CategoryService.GetAsync(Model.CategoryId);
+
+        <div>
+            <h1 class="text-center">حذف الفيديو</h1>
+            <h3>هل أنت متأكد أنك تريد حذف هذا؟</h3><hr>
+
+            <div>
+                <dl class="row">
+                    <dt class="col-sm-2">العنوان</dt>
+                    <dd class="col-sm-10">@(Model.Title)</dd>
+
+                    <dt class="col-sm-2">الفيديو</dt>
+                    <dd class="col-sm-10">
+                        <video controls style="width: 256px; height: 256px; object-fit: cover;">
+                            <source src="@(Model.VideoPath)">
+                            <p>.<a href="@(Model.VideoPath)">الرابط هنا</a> حدث خطأ أثناء تحميل الفيديو ، يمكنك مشاهدة الفيديو من</p>
+                        </video>
+                    </dd>
+
+                    <dt class="col-sm-2">صورة غلاف الفيديو</dt>
+                    <dd class="col-sm-10"><img src="@(Model.CoverPath)" alt="!حدث خطأ أثناء عرض الصورة" style="width: 256px; height: 256px; object-fit: cover;" /></dd>
+
+                    <dt class="col-sm-2">التصنيف</dt>
+                    <dd class="col-sm-10">@((Model.Category != null) ? ((string.IsNullOrWhiteSpace(Model.Category.Name)) ? string.Empty : Model.Category.Name) : string.Empty)</dd>
+
+                    <dt class="col-sm-2">الظهور</dt>
+                    <dd class="col-sm-10">@Html.DisplayFor(model => model.Active)</dd>
+
+                    <dt class="col-sm-2">التاريخ</dt>
+                    <dd class="col-sm-10">@Html.DisplayFor(model => model.Date)</dd>
+
+                    <dt class="col-sm-2">المشاهدات</dt>
+                    <dd class="col-sm-10">@Html.DisplayFor(model => model.ViewsCount)</dd>
+
+                    <dt class="col-sm-2">الإعجابات</dt>
+                    <dd class="col-sm-10">@Html.DisplayFor(model => model.LikesCount)</dd>
+
+                    <dt class="col-sm-2">المشاركات</dt>
+                    <dd class="col-sm-10">@Html.DisplayFor(model => model.SharesCount)</dd>
+
+                    <dt class="col-sm-2">التحميلات</dt>
+                    <dd class="col-sm-10">@Html.DisplayFor(model => model.DownloadsCount)</dd>
+                </dl>
+
+                <form asp-controller="Videos" asp-action="Delete">
+                    <input asp-for="VideoPath" type="hidden" />
+                    <input asp-for="CoverPath" type="hidden" />
+                    <input type="submit" value="حذف" class="btn btn-danger" />
+                    <a class="btn btn-outline-dark" asp-controller="Videos" asp-action="Index">عودة إلى القائمة</a>
+                </form>
+            </div>
+        </div>
+    }
+    else
+    {
+        @await Html.PartialAsync("_PageNotFound")
+    }
+}

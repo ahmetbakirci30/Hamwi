@@ -1,0 +1,19 @@
+<resources>
+  <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <item name="colorPrimary">@color/colorPrimary</item>
+    <item name="colorPrimaryDark">@color/colorPrimary</item>
+    <item name="colorAccent">@color/colorAccent</item>
+    <item name="android:windowBackground">@color/colorPrimary</item>
+    <item name="android:navigationBarColor">@color/colorPrimary</item>
+    <item name="android:fontFamily">@font/mostafa</item>
+  </style>
+  <style name="AppTheme.AppBarOverlay">
+    <item name="android:colorBackground">@color/colorPrimary</item>
+    <item name="android:textColorPrimary">@color/colorPrimaryDark</item>
+    <item name="android:textColorSecondary">@color/colorPrimaryDark</item>
+  </style>
+  <style name="AppTheme.PopupOverlay">
+    <item name="android:colorBackground">@color/colorPrimary</item>
+    <item name="android:textColor">@color/colorPrimaryDark</item>
+  </style>
+</resources>

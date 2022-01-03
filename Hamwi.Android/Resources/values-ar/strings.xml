@@ -1,0 +1,36 @@
+<resources>
+  <string name="app_name">حالات واتس اب فيديو</string>
+  <string name="navigation_drawer_open">Open navigation drawer</string>
+  <string name="navigation_drawer_close">Close navigation drawer</string>
+  <string name="notification_name">Application Notifications</string>
+  <string name="notification_description">Add new status notifications.</string>
+  <string name="startup_error">عذرا ، حدث خطأ غير متوقع أثناء تشغيل التطبيق. يمكنك محاولة فتح التطبيق لاحقًا!</string>
+  <string name="action_videos">الفيديوهات</string>
+  <string name="views">المشاهدات</string>
+  <string name="like">اعجاب</string>
+  <string name="share">مشاركة</string>
+  <string name="download">تحميل</string>
+  <string name="rate">تقييم التطبيق</string>
+  <string name="search">بحث</string>
+  <string name="liked_videos">فيديوهات أعجبتك</string>
+  <string name="added_videos">الفيديوهات المضافة حديثًا</string>
+  <string name="action_whatsapp">واتس اب</string>
+  <string name="downloading_successfully">تم التنزيل بنجاح!</string>
+  <string name="downloading_error">حدث خطأ غير متوقع أثناء التنزيل!</string>
+  <string name="already_exists">الفيديو الذي تحاول تنزيله موجود بالفعل على جهازك!</string>
+  <string name="access">يرجى منح الإذن للوصول إلى ذاكرة الهاتف للاستمتاع بتنزيل مقاطع الفيديو ومشاركتها مع الأصدقاء مجانًا!</string>
+  <string name="access_permission">إذن الوصول</string>
+  <string name="confirm">منح</string>
+  <string name="cancel">إلغاء</string>
+  <string name="download_our_app">لمزيد من الحالات ، قم بتنزيل تطبيقنا الآن! https://play.google.com/store/apps/details?id=</string>
+  <string name="whatsapp_package_name">com.whatsapp</string>
+  <string name="whatsapp_business_package_name">com.whatsapp.w4b</string>
+  <string name="whatsapp_not_found">تطبيق الواتساب غير متوفر على هاتفك!</string>
+  <string name="communicate">حول التطبيق</string>
+  <string name="loading">جاري التحميل...</string>
+  <string name="app_link">https://play.google.com/store/apps/details?id=</string>
+  <string name="description">التطبيق الأول في العالم لجميع أنواع حالات الفيديو في العديد من الفئات المختلفة.</string>
+  <string name="press_back">اضغط مرة أخرى للخروج!</string>
+  <string name="banner_ad_unit_id">ca-app-pub-7526599290234026/1252563531</string>
+  <string name="interstitial_ad_unit_id">ca-app-pub-7526599290234026/4974533738</string>
+</resources>

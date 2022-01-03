@@ -1,0 +1,34 @@
+﻿@model ImageViewModel
+@inject IHamwiServices Hamwi
+
+<div>
+    <h4 class="text-center">معلومات الصورة</h4><hr>
+
+    <div class="row">
+        <div class="col-12">
+            <form asp-controller="Images" asp-action="Create" enctype="multipart/form-data">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group mb-2">
+                    <label asp-for="ImageFile" class="control-label">الصورة</label>
+                    <input asp-for="ImageFile" class="form-control" type="file" accept="image/*" />
+                    <span asp-validation-for="ImageFile" class="text-danger"></span>
+                </div>
+                <div class="form-group mb-2">
+                    <label asp-for="CategoryId" class="control-label">التصنيف</label>
+                    <select asp-for="CategoryId" class="form-control" asp-items="@(new SelectList((await Hamwi.CategoryService.GetAsync()) ?? new List<Category>(), "Id", "Name"))"></select>
+                    <span asp-validation-for="CategoryId" class="text-danger"></span>
+                </div>
+                <div class="form-group form-check mb-2">
+                    <label class="form-check-label"><input class="form-check-input" asp-for="Active" checked />الظهور</label>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="إضافة" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="mt-2">
+        <a class="btn btn-outline-dark" asp-controller="Images" asp-action="Index">عودة إلى القائمة</a>
+    </div>
+</div>

@@ -1,0 +1,39 @@
+﻿@model Notification
+
+@{
+    if (Model != null)
+    {
+        <div>
+            <h4 class="text-center">تفاصيل الاشعار</h4><hr>
+
+            <dl class="row">
+                <dt class="col-sm-2">العنوان</dt>
+                <dd class="col-sm-10"><textarea class="col-12" readonly>@(Model.Title)</textarea></dd>
+
+                <dt class="col-sm-2">النص</dt>
+                <dd class="col-sm-10"><textarea class="col-12" readonly>@(Model.Text)</textarea></dd>
+
+                <dt class="col-sm-2">عدد مرات الاستلام</dt>
+                <dd class="col-sm-10">@Html.DisplayFor(model => model.ReceivedCount)</dd>
+
+                <dt class="col-sm-2">عدد مرات الفتح</dt>
+                <dd class="col-sm-10">@Html.DisplayFor(model => model.OpenedCount)</dd>
+
+                <dt class="col-sm-2">الظهور</dt>
+                <dd class="col-sm-10">@Html.DisplayFor(model => model.Active)</dd>
+
+                <dt class="col-sm-2">التاريخ</dt>
+                <dd class="col-sm-10">@Html.DisplayFor(model => model.Date)</dd>
+            </dl>
+
+            <div>
+                <a class="btn btn-primary" asp-controller="Notifications" asp-action="Edit" asp-route-id="@(Model.Id)">تعديل</a>
+                <a class="btn btn-outline-dark" asp-controller="Notifications" asp-action="Index">عودة إلى القائمة</a>
+            </div>
+        </div>
+    }
+    else
+    {
+        @await Html.PartialAsync("_PageNotFound")
+    }
+}

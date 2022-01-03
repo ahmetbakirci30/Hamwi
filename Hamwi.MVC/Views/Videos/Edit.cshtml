@@ -1,0 +1,65 @@
+﻿@model VideoViewModel
+@inject IHamwiServices Hamwi
+
+@{
+    if (Model != null)
+    {
+        <h4 class="text-center">معلومات الفيديو</h4>
+        <hr />
+
+        <div class="row">
+            <div class="col-12">
+                <form asp-controller="Videos" asp-action="Edit" enctype="multipart/form-data">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group mb-2">
+                        <label asp-for="Title" class="control-label">عنوان الفيديو</label>
+                        <input asp-for="Title" class="form-control" />
+                        <span asp-validation-for="Title" class="text-danger"></span>
+                    </div>
+                    <div class="form-group mb-2">
+                        <label asp-for="VideoFile" class="control-label">الفيديو</label>
+                        <input asp-for="VideoFile" class="form-control" type="file" accept="video/*" />
+                        <video class="mt-1" controls style="width: 128px; height: 128px; object-fit: cover;">
+                            <source src="@Model.VideoPath">
+                            <p>.<a href="@(Model.VideoPath)">الرابط هنا</a> حدث خطأ أثناء تحميل الفيديو ، يمكنك مشاهدة الفيديو من</p>
+                        </video>
+                        <span asp-validation-for="VideoFile" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group mb-2">
+                        <label asp-for="CoverFile" class="control-label">صورة غلاف الفيديو</label>
+                        <input asp-for="CoverFile" class="form-control" type="file" accept="image/*" />
+                        <img class="mt-1" src="@Model.CoverPath" alt="!حدث خطأ أثناء عرض الصورة" style="width: 128px; height: 128px; object-fit: cover;" />
+                        <span asp-validation-for="CoverFile" class="text-danger"></span>
+                    </div>
+                    <div class="form-group mb-2">
+                        <label asp-for="CategoryId" class="control-label">التصنيف</label>
+                        <select asp-for="CategoryId" class="form-control" asp-items="@(new SelectList((await Hamwi.CategoryService.GetAsync()) ?? new List<Category>(), "Id", "Name", Model.CategoryId))"></select>
+                        <span asp-validation-for="CategoryId" class="text-danger"></span>
+                    </div>
+                    <div class="form-group form-check mb-2">
+                        <label class="form-check-label"><input class="form-check-input" asp-for="Active" />الظهور</label>
+                    </div>
+                    <input asp-for="Id" type="hidden" />
+                    <input asp-for="CoverPath" type="hidden" />
+                    <input asp-for="VideoPath" type="hidden" />
+                    <input asp-for="ViewsCount" type="hidden" />
+                    <input asp-for="LikesCount" type="hidden" />
+                    <input asp-for="SharesCount" type="hidden" />
+                    <input asp-for="DownloadsCount" type="hidden" />
+                    <div class="form-group">
+                        <input type="submit" value="حفظ" class="btn btn-primary" />
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="mt-2">
+            <a class="btn btn-outline-dark" asp-controller="Videos" asp-action="Index">عودة إلى القائمة</a>
+        </div>
+    }
+    else
+    {
+        @await Html.PartialAsync("_PageNotFound")
+    }
+}

@@ -1,0 +1,88 @@
+﻿@model HomeViewModel
+@inject IHamwiServices Hamwi
+
+@if (Model != null && Model.Videos != null && Model.Videos.Any())
+{
+    <h1 class="text-center mt-4">الفيديوهات</h1>
+    <div class="row row-cols-1 row-cols-lg-3 g-4">
+        @foreach (var video in Model.Videos)
+        {
+            <div class="col">
+                <div class="card p-2">
+                    <h5 class="text-center">@((string.IsNullOrWhiteSpace(video.Title)) ? string.Empty : ((video.Title.Length > 25) ? $"...{video.Title.Substring(0, 25)}" : video.Title))</h5>
+                    <a href="@(video.VideoPath)"><img src="@(video.CoverPath)" class="rounded-3 col-12" alt="!حدث خطأ أثناء عرض الصورة" style="height: 256px; object-fit: cover;"></a>
+                    <div class="ms-2 me-2">@Html.ActionLink("تحميل", "Download", new { path = video.VideoPath }, new { @class = "btn btn-primary col-12 mt-2" })</div>
+                </div>
+            </div>
+        }
+    </div>
+}
+
+@if (Model != null && Model.Images != null && Model.Images.Any())
+{
+    <h1 class="text-center mt-4">الصور</h1>
+    <div class="row row-cols-1 row-cols-lg-3 g-4">
+        @foreach (var image in Model.Images)
+        {
+            <div class="col">
+                <div class="card p-2">
+                    <a href="@(image.ImagePath)"><img src="@(image.ImagePath)" class="rounded-3 col-12" alt="!حدث خطأ أثناء عرض الصورة" style="height: 256px; object-fit: cover;"></a>
+                    <div class="ms-2 me-2">@Html.ActionLink("تحميل", "Download", new { path = image.ImagePath }, new { @class = "btn btn-primary col-12 mt-2" })</div>
+                </div>
+            </div>
+        }
+    </div>
+}
+
+@if (Model != null && Model.Quotes != null && Model.Quotes.Any())
+{
+    <h1 class="text-center mt-4">الرسائل والاقتباسات</h1>
+    <div class="row row-cols-1 row-cols-lg-3 g-4">
+        @foreach (var quote in Model.Quotes)
+        {
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body d-flex align-items-center justify-content-center"><blockquote class="blockquote mb-0"><p class="text-center">@(quote.Content)</p></blockquote></div>
+                    <div class="card-footer bg-transparent border-0"><button onclick="copy('@(quote.Content)')" class="btn btn-primary col-12">نسخ</button></div>
+                </div>
+            </div>
+        }
+    </div>
+}
+
+@{
+    var videos = (await Hamwi.VideoService.GetAsync()) ?? new List<Video>();
+    var images = (await Hamwi.ImageService.GetAsync()) ?? new List<Image>();
+    var quotes = (await Hamwi.QuoteService.GetAsync()) ?? new List<Quote>();
+    var categories = (await Hamwi.CategoryService.GetAsync()) ?? new List<Category>();
+
+    foreach (var category in categories)
+    {
+        category.StatusCount = videos.Count(video => video.CategoryId == category.Id) + images.Count(image => image.CategoryId == category.Id) + quotes.Count(quote => quote.CategoryId == category.Id);
+        await Hamwi.CategoryService.UpdateAsync(category);
+    }
+}
+
+<script type="text/javascript">
+    function copy(text) {
+        if (window.clipboardData && window.clipboardData.setData)
+            return window.clipboardData.setData("Text", text);
+        else if (document.queryCommandSupported && document.queryCommandSupported("copy")) {
+            var textarea = document.createElement("textarea");
+            textarea.textContent = text;
+            textarea.style.position = "fixed";
+            document.body.appendChild(textarea);
+            textarea.select();
+            try {
+                return document.execCommand("copy");
+            }
+            catch (ex) {
+                console.warn("Copy to clipboard failed.", ex);
+                return false;
+            }
+            finally {
+                document.body.removeChild(textarea);
+            }
+        }
+    }
+</script>

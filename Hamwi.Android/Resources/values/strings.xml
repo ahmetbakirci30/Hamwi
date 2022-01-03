@@ -1,0 +1,36 @@
+<resources>
+  <string name="app_name">WhatsApp Video Statuses</string>
+  <string name="navigation_drawer_open">Open navigation drawer</string>
+  <string name="navigation_drawer_close">Close navigation drawer</string>
+  <string name="notification_name">Application Notifications</string>
+  <string name="notification_description">Add new status notifications.</string>
+  <string name="action_videos">Videos</string>
+  <string name="startup_error">Sorry, an unexpected error occurred while running the application. You can try to open the application later!</string>
+  <string name="views">Views</string>
+  <string name="like">Like</string>
+  <string name="share">Share</string>
+  <string name="download">Download</string>
+  <string name="rate">Rate</string>
+  <string name="search">Search</string>
+  <string name="liked_videos">Videos you like</string>
+  <string name="added_videos">Recently added videos</string>
+  <string name="action_whatsapp">WhatsApp</string>
+  <string name="downloading_successfully">The download was successful!</string>
+  <string name="downloading_error">An unexpected error occurred while downloading!</string>
+  <string name="already_exists">The video you are trying to download already exists on your device!</string>
+  <string name="access">Please give permission to access phone memory to enjoy free download and share videos with friends!</string>
+  <string name="access_permission">Access Permission</string>
+  <string name="confirm">Continue</string>
+  <string name="cancel">Cancel</string>
+  <string name="download_our_app">For more statuses, download our application now! https://play.google.com/store/apps/details?id=</string>
+  <string name="whatsapp_package_name">com.whatsapp</string>
+  <string name="whatsapp_business_package_name">com.whatsapp.w4b</string>
+  <string name="whatsapp_not_found">WhatsApp is not found on your phone!</string>
+  <string name="communicate">About App</string>
+  <string name="loading">Loading...</string>
+  <string name="app_link">https://play.google.com/store/apps/details?id=</string>
+  <string name="description">The first app in the world for all kinds of video statuses in many different categories.</string>
+  <string name="press_back">Press back again to exit!</string>
+  <string name="banner_ad_unit_id">ca-app-pub-7526599290234026/1252563531</string>
+  <string name="interstitial_ad_unit_id">ca-app-pub-7526599290234026/4974533738</string>
+</resources>

@@ -1,0 +1,10 @@
+<resources>
+  <dimen name="activity_horizontal_margin">16dp</dimen>
+  <dimen name="nav_header_height">176dp</dimen>
+  <dimen name="video_viewer">230dp</dimen>
+  <dimen name="item_margin">3dp</dimen>
+  <dimen name="icon_size">24dp</dimen>
+  <dimen name="title_text">16sp</dimen>
+  <dimen name="layout_weight">1</dimen>
+  <dimen name="rotation">180</dimen>
+</resources>

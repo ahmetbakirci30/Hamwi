@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32014.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hamwi.Shared", "Hamwi.Shared\Hamwi.Shared.csproj", "{6F3D492C-8EEA-4642-B1BC-0AECEE5B42AA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hamwi.Api", "Hamwi.Api\Hamwi.Api.csproj", "{239DFFD2-FBC3-444C-B6B9-07F7E00A8741}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hamwi.MVC", "Hamwi.MVC\Hamwi.MVC.csproj", "{538BE67E-5F01-420B-93D3-CA3A526C23FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hamwi.Android", "Hamwi.Android\Hamwi.Android.csproj", "{9CECF3C5-68DE-461D-B26E-86371C78466B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HamwiVideoStatuses", "HamwiVideoStatuses\HamwiVideoStatuses.csproj", "{494D815D-2F8B-4072-BD8E-CFDFB261E909}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6F3D492C-8EEA-4642-B1BC-0AECEE5B42AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F3D492C-8EEA-4642-B1BC-0AECEE5B42AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F3D492C-8EEA-4642-B1BC-0AECEE5B42AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F3D492C-8EEA-4642-B1BC-0AECEE5B42AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{239DFFD2-FBC3-444C-B6B9-07F7E00A8741}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{239DFFD2-FBC3-444C-B6B9-07F7E00A8741}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{239DFFD2-FBC3-444C-B6B9-07F7E00A8741}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{239DFFD2-FBC3-444C-B6B9-07F7E00A8741}.Release|Any CPU.Build.0 = Release|Any CPU
+		{538BE67E-5F01-420B-93D3-CA3A526C23FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{538BE67E-5F01-420B-93D3-CA3A526C23FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{538BE67E-5F01-420B-93D3-CA3A526C23FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{538BE67E-5F01-420B-93D3-CA3A526C23FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CECF3C5-68DE-461D-B26E-86371C78466B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CECF3C5-68DE-461D-B26E-86371C78466B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CECF3C5-68DE-461D-B26E-86371C78466B}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{9CECF3C5-68DE-461D-B26E-86371C78466B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CECF3C5-68DE-461D-B26E-86371C78466B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CECF3C5-68DE-461D-B26E-86371C78466B}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{494D815D-2F8B-4072-BD8E-CFDFB261E909}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{494D815D-2F8B-4072-BD8E-CFDFB261E909}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{494D815D-2F8B-4072-BD8E-CFDFB261E909}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{494D815D-2F8B-4072-BD8E-CFDFB261E909}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{494D815D-2F8B-4072-BD8E-CFDFB261E909}.Release|Any CPU.Build.0 = Release|Any CPU
+		{494D815D-2F8B-4072-BD8E-CFDFB261E909}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {25F84CC1-8B03-4CB4-8857-E03A4C80C13A}
+	EndGlobalSection
+EndGlobal
